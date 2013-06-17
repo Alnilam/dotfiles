@@ -17,3 +17,6 @@
 	diff = auto
 	interactive = auto
 	status = auto
+[user]
+	name = Alnilam
+	email = alnilam@gmail.com
