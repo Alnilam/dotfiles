@@ -1,0 +1,19 @@
+[core]
+	editor = vim
+	autocrlf = input
+	safecrlf = true
+[merge]
+	tool = vimdiff
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
