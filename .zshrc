@@ -1,15 +1,15 @@
 # Prompt
-. ~/.profile
+#. ~/.profile
 
-#PS1= [%n@%m]%~/
-PROMPT="%F{cyan}%n@%m:%F{bright}%F{red}%./%F{bright}%# "
-RPROMPT="%F{cyan}%D %T (%F{green}%h)"
+# variables
+EDITOR='vim'
+
 # aliases
 alias -g ...='../..'
 alias -g ....='../../..'
-
 alias ls='ls -G'
 alias -s tex=vim
+
 alias ez='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
 
@@ -23,10 +23,8 @@ alias gd='git diff'
 alias go='git checkout '
 alias gh='git hist'
 alias ghma='git hist master --all'
-
 alias gk='gitk --all&'
 alias gx='gitx --all'
-
 alias got='git '
 alias get='git '
 
@@ -47,7 +45,6 @@ setopt CORRECT
 autoload -U compinit
 compinit
 
-EDITOR='vim'
 
 ## zmodload -i zsh/complist
 ## xstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
@@ -60,4 +57,7 @@ EDITOR='vim'
 ## 	colors
 ## fi
 
+# prompts
+PROMPT="%F{cyan}%n@%m:%F{bright}%F{red}%./%F{bright}%# "
+RPROMPT="%F{cyan}%D %T (%F{green}%h)"
 
