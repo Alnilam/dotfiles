@@ -31,7 +31,6 @@ endfunction
 " key remappings
 let mapleader = ","
 inoremap jk <Esc>
-vnoremap jk <Esc>
 
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
