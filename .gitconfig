@@ -6,12 +6,17 @@
 	tool = vimdiff
 [alias]
 	st = status
-	ci = commit
+	ci = commit -v
+	cia = commit -a
 	co = checkout
+	cob = checkout -b
 	br = branch
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
+	graph = log --all --graph --decorate --oneline -n30
+	aa= !git add -u && git add . && git status
+
 [color]
 	branch = auto
 	diff = auto
