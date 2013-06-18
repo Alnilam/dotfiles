@@ -40,9 +40,14 @@ SAVEHIST=5000
 # navigation
 setopt AUTO_CD
 
+setopt AUTO_CONTINUE
+setopt CORRECT
+
 # correction and completion
 autoload -U compinit
 compinit
+
+EDITOR='vim'
 
 ## zmodload -i zsh/complist
 ## xstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
@@ -55,5 +60,4 @@ compinit
 ## 	colors
 ## fi
 
-EDITOR=/usr/bin/vim
 
