@@ -11,6 +11,8 @@
 	co = checkout
 	cob = checkout -b
 	br = branch
+	branches = branch -avv
+	bra = branch -avv
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
