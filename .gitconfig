@@ -17,7 +17,8 @@
 	type = cat-file -t
 	dump = cat-file -p
 	graph = log --all --graph --decorate --oneline -n30
-	aa= !git add -u && git add . && git status
+	aa= !git add -A && git status
+	alias = config --get-regexp 'alias.*'
 
 [color]
 	branch = auto
