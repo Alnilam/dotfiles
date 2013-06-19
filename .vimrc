@@ -1,3 +1,7 @@
+" start up pathogen
+call pathogen#infect() 
+
+" basics
 set number
 set wildmode=longest,list,full
 set wildmenu
