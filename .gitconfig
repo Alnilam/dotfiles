@@ -7,7 +7,7 @@
 [alias]
 	st = status
 	ci = commit -v
-	cia = commit -a
+	cia = commit -av
 	co = checkout
 	cob = checkout -b
 	br = branch
@@ -20,13 +20,17 @@
 	aa= !git add -A && git status
 	alias = config --get-regexp 'alias.*'
 	df = diff --name-status
-	lg = log --graph --pretty=format:'%Cred%h %x09 %C(cyan) %ad: %Creset %s %C(yellow)%d %Creset %C(bold blue)<%an>%Creset' --date=short --all
+	lg = log --graph --pretty=format:'%C(red)%h %x09 %C(cyan) %ad: %C(reset) %s %C(yellow)%d %Creset %C(bold blue)<%an> %C(reset)' --date=relative --all
+	lgd = log --graph --pretty=format:'%C(red)%h %x09 %C(cyan) %ad: %C(reset) %s %C(yellow)%d %Creset %C(bold blue)<%an> %C(reset)' --date=short --all
+	lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 
 [color]
 	branch = auto
 	diff = auto
 	interactive = auto
 	status = auto
+	ui = true
 [user]
 	name = Alnilam
 	email = alnilam@gmail.com
