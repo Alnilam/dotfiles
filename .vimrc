@@ -18,20 +18,6 @@ colorscheme desert
 
 set printoptions=syntax:y,paper:letter,wrap:y
 
-function! SuperCleverTab()
-    if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
-        return "\<Tab>"
-    else
-        if &omnifunc != ''
-            return "\<C-X>\<C-O>"
-        elseif &dictionary != ''
-            return "\<C-K>"
-        else
-            return "\<C-N>"
-        endif
-    endif
-endfunction
-
 " key remappings
 let mapleader = ","
 inoremap jk <Esc>
@@ -39,7 +25,6 @@ inoremap jk <Esc>
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 
-inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 "" maybe go back and change this one
