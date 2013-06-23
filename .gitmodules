@@ -4,3 +4,6 @@
 [submodule ".vim/bundle/riv"]
 	path = .vim/bundle/riv
 	url = https://github.com/Rykka/riv.vim.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
