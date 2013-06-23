@@ -1,4 +1,0 @@
-dotfiles
-========
-
-Pretty self explanitory
