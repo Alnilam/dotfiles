@@ -31,3 +31,5 @@
 	interactive = auto
 	status = auto
 	ui = true
+[push]
+	defalt = simple
