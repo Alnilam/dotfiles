@@ -24,6 +24,7 @@ Various .vimrc stuff
 http://www.reddit.com/r/linux/comments/9zq8h/vim_users_what_are_some_interesting_hacks_or
 
 .. code:: vim
+
     Besides the things others have said, one thing that's nice to have in your vimrc is a few autocommands so you can use vim as a viewer for when silly people send you stupid file formats, my vimrc contains:
     " Read-only .doc through antiword
     autocmd BufReadPre *.doc silent set ro
@@ -40,6 +41,7 @@ http://www.reddit.com/r/linux/comments/9zq8h/vim_users_what_are_some_interesting
     " Read-only rtf through unrtf
     autocmd BufReadPre *.rtf silent set ro
     autocmd BufReadPost *.rtf silent %!unrtf --text
+
 
 reStructuredText
 ================
