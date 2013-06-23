@@ -32,4 +32,4 @@
 	status = auto
 	ui = true
 [push]
-	defalt = matching 
+	defalt = current
