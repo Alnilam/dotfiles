@@ -7,8 +7,11 @@ EDITOR='vim'
 # aliases
 alias -g ...='../..'
 alias -g ....='../../..'
+alias po='popd'
 alias ls='ls -G'
+alias lsa='ls -alhG'
 alias -s tex=vim
+alias history='fc -l 1'
 
 alias ez='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
@@ -28,16 +31,15 @@ alias gx='gitx --all'
 alias got='git '
 alias get='git '
 
-
 # History related
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
-
 # navigation
 setopt AUTO_CD
 
+setopt autopushd
 setopt AUTO_CONTINUE
 setopt CORRECT
 
