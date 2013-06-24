@@ -1,11 +1,9 @@
+############## Start: OH-MY-ZSH Additions ###############
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="flazz"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -30,7 +28,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -43,5 +41,55 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+############## End of OH-MY-ZSH Additions ###############
 
-# Customize to your needs...
+# Prompt
+#. ~/.profile
+
+# variables
+EDITOR='vim'
+bindkey -v
+
+# aliases
+alias -g ...='../..'
+alias -g ....='../../..'
+alias po='popd'
+alias ls='ls -G'
+alias lsa='ls -alhG'
+alias -s tex=vim
+alias history='fc -l 1'
+
+alias ez='vim ~/.zshrc'
+alias sz='source ~/.zshrc'
+
+alias gs='git status '
+alias gss='git status -s'
+alias ga='git add '
+alias gaa='git add .'
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gh='git hist'
+alias ghma='git hist master --all'
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias got='git '
+alias get='git '
+
+# History related
+HISTFILE=~/.zsh_history
+HISTSIZE=5000
+SAVEHIST=5000
+
+# navigation
+setopt AUTO_CD
+
+setopt autopushd
+setopt AUTO_CONTINUE
+setopt CORRECT
+
+# correction and completion
+autoload -U compinit
+compinit
+

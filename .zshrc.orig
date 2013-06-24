@@ -3,6 +3,7 @@
 
 # variables
 EDITOR='vim'
+bindkey -v
 
 # aliases
 alias -g ...='../..'
@@ -46,7 +47,6 @@ setopt CORRECT
 # correction and completion
 autoload -U compinit
 compinit
-
 
 ## zmodload -i zsh/complist
 ## xstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
