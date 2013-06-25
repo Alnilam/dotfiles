@@ -35,11 +35,16 @@ alias get='git '
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
 
 # navigation
 setopt AUTO_CD
 
-setopt autopushd
+setopt AUTOPUSHD
 setopt AUTO_CONTINUE
 setopt CORRECT
 
