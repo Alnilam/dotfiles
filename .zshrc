@@ -38,7 +38,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 ############## End of OH-MY-ZSH Additions ###############
@@ -48,7 +48,6 @@ source $ZSH/oh-my-zsh.sh
 
 # variables
 EDITOR='vim'
-bindkey -v
 
 # aliases
 alias -g ...='../..'
@@ -92,4 +91,41 @@ setopt CORRECT
 # correction and completion
 autoload -U compinit
 compinit
+
+## zmodload -i zsh/complist
+## xstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+## autoload -U promptinit
+## promptinit
+
+## autoload colors zsh/terminfo
+## if [[ "$terminfo[colors]" -ge 8 ]]; then
+## 	colors
+## fi
+
+# prompts
+# PROMPT="%F{cyan}%n@%m:%F{bright}%F{red}%./%F{bright}%# "
+PROMPT="%F{cyan}%n@%m:%F{bright}%F{red}%3~%F{bright}%# "
+# RPROMPT="%F{cyan}%D %T (%F{green}%h)"
+
+setopt prompt_subst
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' stagedstr 'M' 
+zstyle ':vcs_info:*' unstagedstr 'M' 
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' actionformats '%F{5}[%F{white}%b%F{3}|%F{1}%a%F{5}]%f '
+zstyle ':vcs_info:*' formats \
+  '%F{5}[%F{white}%b%F{5}] %F{2}%c%F{3}%u%f'
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+zstyle ':vcs_info:*' enable git 
++vi-git-untracked() {
+  if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+    git status --porcelain | grep '??' &> /dev/null ; then
+    hook_com[unstaged]+='%F{1}??%f'
+  fi  
+}
+
+precmd () { vcs_info }
+RPROMPT='$(vi_mode_prompt_info) ${vcs_info_msg_0_} %F{cyan}%D %T (%F{green}%h)'
+# PROMPT='%F{5}[%F{2}%n%F{5}] %F{3}%3~ ${vcs_info_msg_0_} %f%# %F{cyan}%D %T (%F{green}%h)'
 
