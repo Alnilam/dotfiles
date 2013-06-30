@@ -33,11 +33,12 @@ nnoremap <space> za
 
 set diffopt=filler,vertical
 
-" python from powerline.bindings.vim import source_plugin; source_plugin()
+" SuperTab settings
+au FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
 
 set laststatus=2
 set t_Co=256
-" let g:Powerline_symbols = 'unicode'
 
 set statusline=%-3.3n   "buffer number
 set statusline+=\ %t    "tail of the filename
