@@ -9,6 +9,9 @@ set tabstop=4
 set shiftwidth=4
 set visualbell
 
+set directory=$HOME/.vim-tmp,.
+set backupdir=$HOME/.vim-tmp,.
+
 set nocompatible
 syntax enable
 filetype plugin on
