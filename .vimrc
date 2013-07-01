@@ -7,6 +7,7 @@ set wildmode=longest,list,full
 set wildmenu
 set tabstop=4
 set shiftwidth=4
+set expandtab
 set visualbell
 
 set directory=$HOME/.vim-tmp,.
@@ -43,15 +44,27 @@ let g:SuperTabDefaultCompletionType = "context"
 set laststatus=2
 set t_Co=256
 
-set statusline=%-3.3n   "buffer number
-set statusline+=\ %t    "tail of the filename
-set statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
-set statusline+=%{&ff}] "file format
-set statusline+=%h      "help file flag
-set statusline+=%m      "modified flag
-set statusline+=%r      "read only flag
-set statusline+=%y      "filetype
-set statusline+=%=      "left/right separator
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %p%% "percent through file
+hi StatusLine ctermbg=black ctermfg=green
+hi User1 ctermfg=red
+hi User2 ctermfg=172 "orange
+hi User3 ctermfg=11  "yellow
+hi User4 ctermfg=10  "green
+hi User5 ctermfg=14  "cyan
+hi User6 ctermfg=12  "blue
+hi User7 ctermfg=93  "purple
+hi User8 ctermfg=white
+
+set statusline=
+set statusline+=%1*\ %n\ %*             "buffer number
+set statusline+=%5*\ %t\ %*          "tail of the filename
+set statusline+=%4*[%3*%{strlen(&fenc)?&fenc:'none'}%4*, "file encoding
+set statusline+=%3*%{&ff}%4*]%5*     "file format
+set statusline+=%h                   "help file flag
+set statusline+=%1*%m%5*             "modified flag
+set statusline+=%1*%r%5*             "read only flag
+set statusline+=%6*%y%5*             "filetype
+set statusline+=%=                   "left/right separator
+set statusline+=%7*[%8*%{fugitive#statusline()}%7*]\ \ %5*"statusline for git
+set statusline+=%c%5*,\              "cursor column
+set statusline+=%2*%l%5*/%L\         "cursor line/total lines
+set statusline+=%4*(%2*%p%%%4*)      "percent through file
