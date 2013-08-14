@@ -44,7 +44,7 @@ source $ZSH/oh-my-zsh.sh
 ############## End of OH-MY-ZSH Additions ###############
 
 # Prompt
-#. ~/.profile
+~/.profile
 
 # variables
 EDITOR='vim'
