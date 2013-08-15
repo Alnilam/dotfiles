@@ -45,6 +45,7 @@ set laststatus=2
 set t_Co=256
 
 " powerline settings
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 if ! has('gui_running')
     set ttimeoutlen=10
     augroup FastEscape
