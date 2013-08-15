@@ -23,7 +23,7 @@ syntax enable
 filetype plugin on
 filetype indent on
 
-"colorscheme desert
+colorscheme mrkn256
 
 set printoptions=syntax:y,paper:letter,wrap:y
 let vimrplugin_tmux=0
