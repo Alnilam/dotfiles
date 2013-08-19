@@ -24,6 +24,7 @@ filetype plugin on
 filetype indent on
 
 colorscheme mrkn256
+hi Normal ctermbg=None
 
 set printoptions=syntax:y,paper:letter,wrap:y
 let vimrplugin_tmux=0
