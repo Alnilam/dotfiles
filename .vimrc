@@ -65,6 +65,7 @@ if ! has('gui_running')
     augroup END
 endif
 
+:nohls
 
 " hi StatusLine ctermbg=black ctermfg=green
 " hi User1 ctermfg=red
