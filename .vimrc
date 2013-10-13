@@ -31,6 +31,7 @@ let vimrplugin_tmux=0
 
 " key remappings
 let mapleader = ","
+inoremap <Left> <Esc>
 inoremap jk <Esc>
 nmap <leader>u :setlocal number!<CR>
 nmap <leader>p :set paste!<CR>
